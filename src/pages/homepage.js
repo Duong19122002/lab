@@ -1,15 +1,15 @@
 import Banner from "../components/banner";
-import NewsList from "../components/newsList";
+import News from "../components/news";
 
 const HomePage = {
-    print() {
+    render() {
         return /* html */`
         <div class="container mx-auto">
             <div class="banner">
-                ${Banner.print()}
+                ${Banner.render()}
             </div>
             <div class="news">
-                ${NewsList.print()}
+                ${News.render()}
             </div>
         </div>
         `;

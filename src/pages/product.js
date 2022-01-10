@@ -1,5 +1,5 @@
 const ProductPage = {
-    print() {
+    render() {
         return /* html */`
             <h1>Product Page</h1>
         `;
