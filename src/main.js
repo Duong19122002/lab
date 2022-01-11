@@ -4,24 +4,26 @@ import HomePage from "./pages/homepage";
 import ProductPage from "./pages/product";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import DetailPage from "./pages/detail";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
 const print = (content) => {
     document.querySelector("#header").innerHTML = Header.render();
-    document.querySelector("#app").innerHTML = content.render();
+    document.querySelector("#app").innerHTML = content;
     document.querySelector("#footer").innerHTML = Footer.render();
 };
 
 router.on({
     "/": () => {
-        print(HomePage);
+        print(HomePage.render());
     },
     "/about": () => {
-        print(AboutPage);
+        print(AboutPage.render());
     },
-    "/product": () => {
-        print(ProductPage);
+    "/product/:id": ({ data }) => {
+        const { id } = data;
+        print(DetailPage.render(id));
     },
 });
 

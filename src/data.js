@@ -23,7 +23,7 @@ export const data2 = [
     
 ];
 export const data3 =[
-    {img:"https://picsum.photos/300/300"},
+    {img:"https://fpt.edu.vn/Content/images/assets/Poly.png"},
 ];
 
 
