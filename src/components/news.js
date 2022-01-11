@@ -8,7 +8,7 @@ const News = {
                 ${data.map((post) => `
                     <div class="border p-3">
                         <img src="${post.img}" alt="" />
-                        <h3><a href="">${post.title}</a></h3>
+                        <h3><a href="/product/${post.id}">${post.title}</a></h3>
                         <p>${post.desc}</p>
                     </div>  
                     `).join("")}

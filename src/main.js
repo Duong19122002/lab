@@ -23,7 +23,7 @@ router.on({
     },
     "/product/:id": ({ data }) => {
         const { id } = data;
-        print(DetailPage.render(id));
+        print(DetailPage.render(+id));
     },
 });
 
