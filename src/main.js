@@ -5,6 +5,7 @@ import ProductPage from "./pages/product";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import DetailPage from "./pages/detail";
+import AdminProductPage from "./pages/admin/product";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -24,6 +25,9 @@ router.on({
     "/product/:id": ({ data }) => {
         const { id } = data;
         print(DetailPage.render(+id));
+    },
+    "/admin/products":()=>{
+        print(AdminProductPage.render());
     },
 });
 
