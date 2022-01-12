@@ -13,6 +13,7 @@ const Header = {
             <li><a href="/" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Home Page</a></li>
             <li><a href="/about" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">About Page</a></li>
             <li><a href="/product" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Product Page</a></li>
+            <li><a href="/signup" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">SignUp</a></li>
             </ul>
         </div>
         <div class="header-bottom__search p-3">

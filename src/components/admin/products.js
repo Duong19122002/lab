@@ -49,7 +49,7 @@ const AdminProductList = {
                         ${post.desc}
                         </td>
                         <td class="px-8 py-4 whitespace-nowrap text-sm font-medium">
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
+                          <a href="admin/product/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
                         </td>
                       </tr>
             

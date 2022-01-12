@@ -40,7 +40,7 @@ router.on({
     },
 });
 
-router.resolve();
+    router.resolve();
 
 // Cach 2
 // router.on("/", () => {
