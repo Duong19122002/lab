@@ -2,6 +2,7 @@ import {data} from "../../data";
 
 const AdminProductEdit ={
     render(id){
+        const result = data.find((post) => post.id === id);
         return/*html*/`
         <form>
         <input type="text" class="border" value="${result.title}" placeholder="Tiêu đề bài viết" id="post-title"/> <br/>

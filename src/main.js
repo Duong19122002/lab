@@ -6,6 +6,8 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import DetailPage from "./pages/detail";
 import AdminProductPage from "./pages/admin/product";
+import AdminProductEdit from "./pages/admin/productEdit";
+import SignUp from "./pages/signup";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -22,12 +24,19 @@ router.on({
     "/about": () => {
         print(AboutPage.render());
     },
+    "/signup":()=>{
+        print(SignUp.render());
+    },
     "/product/:id": ({ data }) => {
         const { id } = data;
-        print(DetailPage.render(+id));
+        print(DetailPage.render(id));
     },
-    "/admin/products":()=>{
+    "/admin/products": () => {
         print(AdminProductPage.render());
+    },
+    "/admin/product/:id/edit": ({ data }) => {
+        const { id } = data;
+        print(AdminProductEdit.render(id));
     },
 });
 
