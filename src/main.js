@@ -8,6 +8,7 @@ import DetailPage from "./pages/detail";
 import AdminProductPage from "./pages/admin/product";
 import AdminProductEdit from "./pages/admin/productEdit";
 import SignUp from "./pages/signup";
+import DashBoard from "../src/components/admin/dashboard"
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -38,6 +39,10 @@ router.on({
         const { id } = data;
         print(AdminProductEdit.render(id));
     },
+        "/admin/dashboard":()=>{
+         print(DashBoard.render());
+        },
+
 });
 
     router.resolve();
