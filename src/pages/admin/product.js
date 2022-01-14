@@ -3,7 +3,9 @@ const AdminProductPage = {
   render() {
     return `
      <div>
-     <h1>Quản Lý Product</h1>
+     <div class="text-center"> 
+  <h1>QUẢN LÝ PRODUCT</h1>
+     </div>
      ${AdminProductList.render()}
      </div>
      `;

@@ -8,14 +8,14 @@ import DetailPage from "./pages/detail";
 import AdminProductPage from "./pages/admin/product";
 import AdminProductEdit from "./pages/admin/productEdit";
 import SignUp from "./pages/signup";
-import DashBoard from "../src/components/admin/dashboard"
+import DashboardPage from "./pages/dashboard";
+import AdminNews from "./pages/admin/news";
+import AdminNewsAdd from "./pages/admin/news/add";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
 const print = (content) => {
-    document.querySelector("#header").innerHTML = Header.render();
     document.querySelector("#app").innerHTML = content;
-    document.querySelector("#footer").innerHTML = Footer.render();
 };
 
 router.on({
@@ -39,9 +39,10 @@ router.on({
         const { id } = data;
         print(AdminProductEdit.render(id));
     },
-        "/admin/dashboard":()=>{
-         print(DashBoard.render());
-        },
+    "/admin/dashboard": () => print(DashboardPage.render()),
+    "/admin/products": () => print(AdminProductPage.render()),
+    "/admin/news": () => print(AdminNews.render()),
+    "/admin/news/add": () => print(AdminNewsAdd.render()),
 
 });
 
