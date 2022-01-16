@@ -1,37 +1,26 @@
 import Navigo from "navigo";
 import AboutPage from "./pages/about";
 import HomePage from "./pages/homepage";
-import ProductPage from "./pages/product";
-import Header from "./components/header";
-import Footer from "./components/footer";
 import DetailPage from "./pages/detail";
 import AdminProductPage from "./pages/admin/product";
 import AdminProductEdit from "./pages/admin/productEdit";
 import SignUp from "./pages/signup";
-import DashboardPage from "./pages/dashboard";
-import AdminNews from "./pages/admin/news";
+import Dashboard from "./pages/admin/dashboard";
+import AdminNewsPage from "./pages/admin/news/index";
 import AdminNewsAdd from "./pages/admin/news/add";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (content) => {
-    document.querySelector("#app").innerHTML = content;
+const print = (content, id) => {
+    document.querySelector("#app").innerHTML = content.render(id);
+    if(content.afterRender) content.afterRender();
 };
 
 router.on({
-    "/": () => {
-        print(HomePage.render());
-    },
-    "/about": () => {
-        print(AboutPage.render());
-    },
-    "/signup":()=>{
-        print(SignUp.render());
-    },
-    "/product/:id": ({ data }) => {
-        const { id } = data;
-        print(DetailPage.render(id));
-    },
+    "/": () => print(HomePage),
+    "/about": () => print(AboutPage),
+    "/signup":()=> print(SignUp),
+    "/product/:id": ({ data }) =>print(DetailPage,data.id),
     "/admin/products": () => {
         print(AdminProductPage.render());
     },
@@ -39,9 +28,9 @@ router.on({
         const { id } = data;
         print(AdminProductEdit.render(id));
     },
-    "/admin/dashboard": () => print(DashboardPage.render()),
+    "/admin/dashboard": () => print(Dashboard),
     "/admin/products": () => print(AdminProductPage.render()),
-    "/admin/news": () => print(AdminNews.render()),
+    "/admin/news": () => print(AdminNewsPage),
     "/admin/news/add": () => print(AdminNewsAdd.render()),
 
 });
