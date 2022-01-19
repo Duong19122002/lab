@@ -48,7 +48,7 @@ const AdminNewsPage= {
                                         </div>
                                     </div>
                                     </div>
-                                    </div>
+                                    </div>          
                     </div>
                     <!-- /End replace -->
                 </div>
