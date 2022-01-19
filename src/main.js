@@ -19,7 +19,7 @@ const print = (content, id) => {
 router.on({
     "/": () => print(HomePage),
     "/about": () => print(AboutPage),
-    "/signup":()=> print(SignUp),
+    "/signin":()=> print(SignUp),
     "/product/:id": ({ data }) =>print(DetailPage,data.id),
     "/admin/products": () => {
         print(AdminProductPage.render());
