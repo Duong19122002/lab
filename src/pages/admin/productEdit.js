@@ -1,9 +1,9 @@
-import {data} from "../../data";
+import { data } from "../../data";
 
-const AdminProductEdit ={
-    render(id){
-        const result = data.find((post) => post.id === id);
-        return/*html*/`
+const AdminProductEdit = {
+  render(id) {
+    const result = data.find((post) => post.id === id);
+    return/*html*/`
 
 <div>
 <div class="md:grid md:grid-cols-3 md:gap-6">
@@ -105,6 +105,6 @@ const AdminProductEdit ={
 </div>
  
         `;
-    }
+  }
 };
 export default AdminProductEdit;
