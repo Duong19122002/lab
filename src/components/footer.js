@@ -1,7 +1,9 @@
 const Footer={
     render(){
         return`
-        <p class="text-center text-white">Nguyễn Ngọc Dương</p>
+        <footer class="bg-slate-900 py-4 mx-auto mt-6">
+        <p class="text-center text-white">NGUYỄN NGỌC DƯƠNG </p>
+      </footer>
         `;
     },
 };

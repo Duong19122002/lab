@@ -1,14 +1,15 @@
-import { data,data2 } from "../data";
+import { get } from "../api/post";
+
 const DetailPage = {
-    render(id) {
-        console.log("id in detail page", id);
-        const result = data.find((post) => post.id === id);
-        return /*html*/ `
-        <div class="border">
-        <h1> ${result.title}</h1>
-        <img src="${result.img}" atl=""/>
-        <p>${result.desc} </p>
-        </div>
+    async render(id) {
+        const { data } = await get(id);
+        // const result = data.find((post) => post.id === id);
+        return /* html */`
+            <div>
+                <h1>${data.title}</h1>
+                <img src="${data.img}" alt="" />
+                <p>${data.desc}</p>
+            </div>
         `;
     },
 };
