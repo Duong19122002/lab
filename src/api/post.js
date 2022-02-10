@@ -1,7 +1,8 @@
+
 import instance from "./config";
 
 export const getAll = () => {
-    const url = `/posts`;
+    const url = `/post`;
     return instance.get(url);
 };
 export const get = (id) => {
@@ -9,14 +10,14 @@ export const get = (id) => {
     return instance.get(url);
 };
 export const add = (post) => {
-    const url = `/posts`;
+    const url = `/post`;
     return instance.post(url, post);
 };
 export const remove = (id) => {
-    const url = `/posts/${id}`;
+    const url = `/post/${id}`;
     return instance.delete(url);
 };
 export const update = (post) => {
-    const url = `/posts/${post.id}`;
+    const url = `/post/${post.id}`;
     return instance.put(url, post);
-};
+}

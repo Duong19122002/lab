@@ -44,6 +44,7 @@ const AdminEditPost = {
                             <button>Update New</button>
                         </form>
                     </div>
+                    <!-- /End replace -->
                 </div>
             </main>
         </div>

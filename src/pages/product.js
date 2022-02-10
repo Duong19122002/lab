@@ -1,8 +1,6 @@
 const ProductPage = {
     render() {
-        return /* html */`
-            <h1>Product Page</h1>
-        `;
+        return `Product Page`;
     },
 };
 export default ProductPage;

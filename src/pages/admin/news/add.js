@@ -1,7 +1,8 @@
-import AdminNav from "../../../components/AdminNav";
+import axios from "axios";
 import { add } from "../../../api/post";
+import AdminNav from "../../../components/AdminNav";
 
-const AdminNewsAdd = {
+const AdminAddPost = {
     async render() {
         console.log("Add Post");
         return /* html */`
@@ -23,8 +24,8 @@ const AdminNewsAdd = {
                 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
                     <div class="px-4 py-6 sm:px-0">
                         <form id="form-add">
-                            <input type="text" id="title-post" class="border border-black" placeholder="Title" /> </br>
-                            <input type="text" id="img-post" class="border border-black"  placeholder="Image" /> </br>
+                            <input type="text" id="title-post" class="border border-black" placeholder="Title" /> </br >
+                            <input type="file" id="img-post" class="border border-black"  placeholder="Image" //> </br >
                             <textarea name="" id="desc-post" cols="30" rows="10" class="border border-black"></textarea>
                             <button>Add New</button>
                         </form>
@@ -38,14 +39,30 @@ const AdminNewsAdd = {
     },
     afterRender() {
         const formAdd = document.querySelector("#form-add");
-        formAdd.addEventListener("submit", (e) => {
+        const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/web16309/image/upload";
+        const CLOUDINARY_PRESET = "r8vgl176";
+
+        formAdd.addEventListener("submit", async (e) => {
             e.preventDefault();
+            const file = document.querySelector("#img-post").files[0];
+
+            const formData = new FormData();
+            formData.append("file", file);
+            formData.append("upload_preset", CLOUDINARY_PRESET);
+
+            const { data } = await axios.post(CLOUDINARY_API, formData, {
+                headers: {
+                    "Content-Type": "application/form-data",
+                },
+            });
+            // call api
+
             add({
                 title: document.querySelector("#title-post").value,
-                img: document.querySelector("#img-post").value,
+                img: data.url,
                 desc: document.querySelector("#desc-post").value,
             });
         });
     },
 };
-export default AdminNewsAdd;
+export default AdminAddPost; 

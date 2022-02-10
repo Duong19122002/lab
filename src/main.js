@@ -1,33 +1,33 @@
 import Navigo from "navigo";
 import AboutPage from "./pages/about";
-import HomePage from "./pages/homepage";
-import DetailPage from "./pages/detail";
-import AdminProductPage from "./pages/admin/product";
-import AdminProductEdit from "./pages/admin/productEdit";
-import SignUp from "./pages/signup";
 import Dashboard from "./pages/admin/dashboard";
-import AdminNewsPage from "./pages/admin/news/index";
-import AdminNewsAdd from "./pages/admin/news/add";
-const router = new Navigo("/", { linksSelector: "a",hash: true });
+import AdminNewsPage from "./pages/admin/news";
+import AdminAddPost from "./pages/admin/news/add";
+import AdminEditPost from "./pages/admin/news/edit";
+import DetailPage from "./pages/detail";
+import HomePage from "./pages/home";
+import ProductPage from "./pages/product";
+import Signin from "./pages/signin";
+import Signup from "./pages/signup";
+
+const router = new Navigo("/", { linksSelector: "a", hash: true });
+
 const print = async (content, id) => {
     document.querySelector("#app").innerHTML = await content.render(id);
-    if (content.afterRender) content.afterRender();
+    if (content.afterRender) content.afterRender(id);
 };
+
 router.on({
     "/": () => print(HomePage),
     "/about": () => print(AboutPage),
-    "/signin": () => print(SignUp),
-    "/product/:id": ({ data }) => print(DetailPage, data.id),
-    "/admin/products": () => { print(AdminProductPage); },
-    "/admin/product/:id/edit": ({ data }) => {
-        const { id } = data;
-        print(AdminProductEdit.render(id));
-    },
+    "/product": () => print(ProductPage),
+    "/signin": () => print(Signin),
+    "/signup": () => print(Signup),
+    "/news/:id": ({ data }) => print(DetailPage, data.id),
     "/admin/dashboard": () => print(Dashboard),
-    "/admin/products": () => print(AdminProductPage),
     "/admin/news": () => print(AdminNewsPage),
-    "/admin/news/add": () => print(AdminNewsAdd),
+    "/admin/news/add": () => print(AdminAddPost),
     "/admin/news/:id/edit": ({ data }) => print(AdminEditPost, data.id),
-
 });
+
 router.resolve();
