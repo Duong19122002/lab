@@ -9,6 +9,7 @@ import HomePage from "./pages/home";
 import ProductPage from "./pages/product";
 import Signin from "./pages/signin";
 import Signup from "./pages/signup";
+import ProductsPage from "./pages/products"
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -16,11 +17,22 @@ const print = async (content, id) => {
     document.querySelector("#app").innerHTML = await content.render(id);
     if (content.afterRender) content.afterRender(id);
 };
-
+router.on("/admin/*", () => {}, {
+    before: (done) => {
+        const userId = JSON.parse(localStorage.getItem("user")).id;
+        // nếu userId === 1 thì tôi mới render
+        if (userId === 1) {
+            done();
+        } else {
+            // ngược thì lại redirect về trang chủ
+            document.location.href = "/";
+        }
+    },
+}); 
 router.on({
     "/": () => print(HomePage),
     "/about": () => print(AboutPage),
-    "/product": () => print(ProductPage),
+    "/product": () => print(ProductsPage),
     "/signin": () => print(Signin),
     "/signup": () => print(Signup),
     "/news/:id": ({ data }) => print(DetailPage, data.id),
@@ -28,6 +40,7 @@ router.on({
     "/admin/news": () => print(AdminNewsPage),
     "/admin/news/add": () => print(AdminAddPost),
     "/admin/news/:id/edit": ({ data }) => print(AdminEditPost, data.id),
+    "/products/:id": ({ data }) => print(DetailProduct, data.id),
 });
 
 router.resolve();

@@ -1,3 +1,6 @@
+import toastr from "toastr";
+import { reRender } from "../utils";
+import "toastr/build/toastr.min.css";
 const Header = {
   render() {
     // return /*html*/`
@@ -19,7 +22,7 @@ const Header = {
       <div class="flex justify-start lg:w-0 lg:flex-1">
         <a href="#">
           <span class="sr-only">Workflow</span>
-          <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+          <img class="h-8 w-auto sm:h-10" src="https://zeitzmocaa.museum/wp-content/uploads/2017/09/Gucci-logo.png" alt="">
         </a>
       </div>
       <div class="-mr-2 -my-2 md:hidden">
@@ -36,18 +39,24 @@ const Header = {
 
         <a href="/#/about" class="text-base font-medium text-gray-500 hover:text-gray-900"> About Page </a>
         <a href="/#/product" class="text-base font-medium text-gray-500 hover:text-gray-900"> Product </a>
-
         <div class="relative">
           <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false">
+          <button type="button" class="text-gray-800 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false">
           <a href="/#/admin/dashboard" class="text-base font-medium text-gray-500 hover:text-gray-900"> Admin </a>
           </button>
         </div>
+        </ul>
       </nav>
-      <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-        <a href="/signin" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
-        <a href="/signup" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"> Sign up </a>
-      </div>
+      ${localStorage.getItem("user") ? `<ul class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+      <li><a  id="account-email" class="text-base font-medium text-gray-500 hover:text-gray-900"></a></li>
+      <li><a  id="logout" class="text-base font-medium text-gray-500 hover:text-gray-900">Logout</a></li>
+  </ul>` : `
+  <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+  <a href="/signin" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
+  <a href="/signup" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"> Sign up </a>
+</div>
+  `}
+
     </div>
   </div>
 
@@ -55,6 +64,20 @@ const Header = {
 </div>
 
 `;
+  },
+  afterRender() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const logout = document.querySelector("#logout");
+
+    document.querySelector("#account-email").innerHTML = user.username;
+    // logout 
+    if(logout){
+      logout.addEventListener("click", () => {
+        toastr.success("Logout thành công");
+        localStorage.removeItem("user");
+        reRender(Header, "#header");
+      });
+    }
   },
 };
 export default Header;

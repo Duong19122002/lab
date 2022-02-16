@@ -15,11 +15,14 @@ const HomePage = {
                 <div class="news">
                     ${await News.render()}
                 </div>
-            </main>
-            ${Footer.render()}
-        </div>
-            
+            </main> 
+            <!-- component -->
+
+        </div>         
         `;
     },
+    afterRender() {
+        Header.afterRender();
+    }
 };
 export default HomePage;
