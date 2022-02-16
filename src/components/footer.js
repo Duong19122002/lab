@@ -1,6 +1,8 @@
 const Footer = {
     render() {
-        return `<footer class="border-t mt-12 pt-12 pb-32 px-4 lg:px-0">
+        return `
+        <div class="max-w-screen-lg mx-auto">
+        <footer class=" max-w-7xl mx-auto px-4 sm:px-6border-t mt-12 pt-12 pb-32 px-4 lg:px-0">
         <div class="flex flex-wrap">
           <div class="w-full lg:w-2/5">
             <p class="text-gray-600 hidden lg:block p-0 lg:pr-12">
@@ -40,7 +42,9 @@ const Footer = {
           </div>
   
         </div>
-      </footer>`;
+      </footer>
+      </div>
+      `;
     },
 };
 export default Footer;

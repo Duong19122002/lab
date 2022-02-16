@@ -15,6 +15,7 @@ const HomePage = {
                 <div class="news">
                     ${await News.render()}
                 </div>
+                ${Footer.render()}
             </main> 
             <!-- component -->
 
