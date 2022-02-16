@@ -4,6 +4,6 @@ export const signup = (user) => {
     return instance.post(url, user);
 };
 export const signin = (user) => {
-    const url = "signin";
+    const url = "/signin";
     return instance.post(url, user);
 };

@@ -4,7 +4,7 @@ import Header from "../components/header";
 
 const AboutPage = {
     render() {
-        return `
+        return /*html*/ `
         <!-- component -->
         <div class="max-w-screen-lg mx-auto">
         ${Header.render()}

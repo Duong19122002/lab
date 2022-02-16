@@ -1,4 +1,5 @@
 
+import { doc } from "prettier";
 import { signup } from "../api/user";
 const Signup = {
     render() {
@@ -30,7 +31,7 @@ const Signup = {
         </div>
         <div class="w-full lg:w-1/2 px-4">
           <div class="px-6 lg:px-20 py-12 lg:py-24 bg-gray-600 rounded-lg">
-            <form action="#" id="formSignUp">
+            <form    id="formSignUp">
               <h3 class="mb-10 text-2xl text-white font-bold font-heading">ĐĂNG KÝ</h3>
               <div class="flex items-center pl-6 mb-3 bg-white rounded-full">
                 <span class="inline-block pr-3 py-2 border-r border-gray-50">
@@ -40,7 +41,7 @@ const Signup = {
                     <rect x="15" y="15" width="5" height="1" rx="0.5" fill="black"></rect><rect x="17" y="18" width="5" height="1" rx="0.5" transform="rotate(-90 17 18)" fill="black"></rect>
                   </svg>
                 </span>
-                <input id="username" class="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none" type="text" placeholder="User name">
+                <input id="username" class="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-600 rounded-r-full focus:outline-none" type="text" placeholder="User name">
               </div>
               <div class="flex items-center pl-6 mb-3 bg-white rounded-full">
                 <span class="inline-block pr-3 py-2 border-r border-gray-50">
@@ -50,7 +51,7 @@ const Signup = {
                 <rect x="15" y="15" width="5" height="1" rx="0.5" fill="black"></rect><rect x="17" y="18" width="5" height="1" rx="0.5" transform="rotate(-90 17 18)" fill="black"></rect>
               </svg>
                 </span>
-                <input id="email" class="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none" type="email" placeholder="Email">
+                <input id="email" class="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-600 rounded-r-full focus:outline-none" type="email" placeholder="Email">
               </div>
               <div class="flex items-center pl-6 mb-6 bg-white rounded-full">
                 <span class="inline-block pr-3 py-2 border-r border-gray-50">
@@ -59,7 +60,7 @@ const Signup = {
                 <path d="M8.49957 8.93567C7.26775 8.93567 6.26562 9.93779 6.26562 11.1696C6.26562 11.8679 6.60247 12.5283 7.1592 12.9474V14.7439C7.1592 15.4829 7.76062 16.0843 8.49957 16.0843C9.2381 16.0843 9.83994 15.4829 9.83994 14.7439V12.9474C10.3966 12.5278 10.7335 11.8679 10.7335 11.1696C10.7335 9.93779 9.7309 8.93567 8.49957 8.93567ZM9.16793 12.3228C9.03032 12.4023 8.94636 12.5502 8.94636 12.7088V14.7439C8.94636 14.9906 8.74572 15.1907 8.49957 15.1907C8.25342 15.1907 8.05278 14.9906 8.05278 14.7439V12.7088C8.05278 12.5502 7.96833 12.4032 7.83072 12.3228C7.41026 12.078 7.1592 11.6468 7.1592 11.1696C7.1592 10.4307 7.76062 9.82925 8.49957 9.82925C9.2381 9.82925 9.83994 10.4307 9.83994 11.1696C9.83994 11.6468 9.58881 12.078 9.16793 12.3228Z" fill="black"></path>
               </svg>
                 </span>
-                <input id="password" class="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none" type="password" placeholder="Password">
+                <input id="password" class="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-600 rounded-r-full focus:outline-none" type="password" placeholder="Password">
               </div>
               <div class="inline-flex mb-10">
                 <input class="mr-4" type="checkbox">
@@ -75,14 +76,17 @@ const Signup = {
 </section>
     `;
     },
-    afterRender() {
+    afterRender() {  
+      
       const formSignup = document.querySelector("#formSignUp");
       formSignup.addEventListener("submit", (e) => {
           e.preventDefault();
           signup({
+            username: document.querySelector("#username").value,
               email: document.querySelector("#email").value,
               password: document.querySelector("#password").value,
           });
+          
       });
   },
 };

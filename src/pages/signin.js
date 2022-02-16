@@ -96,7 +96,7 @@ const Signin = {
                      href="javascript:void(0)"
                      class="inline-block max-w-[160px] mx-auto"
                      >
-                  <img src="https://zeitzmocaa.museum/wp-content/uploads/2017/09/Gucci-logo.png" alt="logo" />
+                  <img src="https://i.pinimg.com/originals/13/c4/02/13c40225b62fdcc37bbe05ef149c3619.png" alt="logo" />
                   </a>
                </div>
                <form id="formSignIn">
@@ -507,7 +507,7 @@ const Signin = {
               localStorage.setItem("user", JSON.stringify(data.user));
               toastr.success("Bạn đã đăng nhập thành công, chờ 3s để chuyển trang");
               setTimeout(() => {
-              // kiểm tra quyền dựa trên ID
+                 // kiểm tra quyền dựa trên ID
                   if (data.user.id === 1) {
                       document.location.href = "/#/admin/dashboard";
                   } else {

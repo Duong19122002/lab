@@ -2,8 +2,8 @@
   "posts": [
     {
       "createdAt": "2022-01-14T12:38:27.738Z",
-      "title": "bài viết này được đổi",
-      "img": "http://placeimg.com/640/480/nature",
+      "title": "Gucci Beloved Bags",
+      "img": "https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/originals-ss22-always-original-launch-digital-hp-teaser-carousel-d_tcm221-847900.jpg",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
       "id": "10"
     },
@@ -20,29 +20,7 @@
       "img": "http://placeimg.com/640/480/fashion",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
       "id": "13"
-    },
-    {
-      "createdAt": "2022-01-15T02:21:11.908Z",
-      "title": "Mrs. Drew Farrell",
-      "img": "http://placeimg.com/640/480/fashion",
-      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": "13"
-    },
-    {
-      "createdAt": "2022-01-15T02:21:11.908Z",
-      "title": "Mrs. Drew Farrell",
-      "img": "http://placeimg.com/640/480/fashion",
-      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": "13"
-    },
-    {
-      "createdAt": "2022-01-15T02:21:11.908Z",
-      "title": "Mrs. Drew Farrell",
-      "img": "http://placeimg.com/640/480/fashion",
-      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": "13"
     }
- 
   ],
   "users": [
     {
@@ -74,6 +52,33 @@
       "password": "$2a$10$XwNua3H5e5CltmwnSYFdFOc.EcQEp2FhwD9N82CufKWm.pLIuoflO",
       "username": "hoangdznhe01",
       "id": 5
+    },
+    {
+      "email": "thai1@gmail.com",
+      "password": "$2a$10$FkmvY6Wh4GYoWDY/yOL9XetcqcDueCjSRYICGr5Q1ZQiiZPMUJXF6",
+      "id": 6
+    },
+    {
+      "email": "duong1@gmail.com",
+      "password": "$2a$10$owmxVnw4kuRG.Bgkdfk2Bu/vKUgeVHrq4WuCskIzkaOmN1ckjB5j.",
+      "id": 7
+    },
+    {
+      "email": "hoang1@gmail.com",
+      "password": "$2a$10$E8X57C9SmPWYzj4oJjSTi.JCf489h958cr24guJDZVRx/BvF9c31y",
+      "id": 8
+    },
+    {
+      "email": "doan1@gmail.com",
+      "password": "$2a$10$XxCc/aJPqQIh.dYGFT5IE.KKcIP8poybIRaiEP2xYPj7keEM4Edfi",
+      "username": "doan1",
+      "id": 9
+    },
+    {
+      "email": "duong@gmail.com",
+      "password": "$2a$10$5p/lKZ./yuKC8R6IcnBPSeE9wRVWVUVWfULcQOPbo.TJLMINML4WS",
+      "username": "duong19122002@gmail.com",
+      "id": 10
     }
   ],
   "products": [
@@ -98,5 +103,6 @@
       "price": "300",
       "id": "3"
     }
-  ]
+  ],
+  "post1": []
 }
