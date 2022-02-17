@@ -37,8 +37,8 @@ const Header = {
         <nav class="hidden md:flex space-x-10">
         <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900"> Trang Chủ </a>
 
-          <a href="/#/about" class="text-base font-medium text-gray-500 hover:text-gray-900"> About Page </a>
-          <a href="/#/product" class="text-base font-medium text-gray-500 hover:text-gray-900"> Product </a>
+          <a href="/#/about" class="text-base font-medium text-gray-500 hover:text-gray-900"> Sản Phẩm </a>
+          <a href="/#/product" class="text-base font-medium text-gray-500 hover:text-gray-900"> Tin Tức </a>
           <div class="relative">
             <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
             <button type="button" class="text-gray-800 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false">

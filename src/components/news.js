@@ -1,4 +1,5 @@
 import { getAll } from "../api/post";
+import NewProduct from "../components/newproduct"
 
 const News = {
     async render() {
@@ -60,71 +61,21 @@ const News = {
       </a>
     </div>
 
-    <!-- sub-main posts -->
-    <div class="w-full md:w-4/7">
-      <!-- post 1 -->
-      <div class="rounded w-full flex flex-col md:flex-row mb-10">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" class="block md:hidden lg:block rounded-md h-64 md:h-32 m-4 md:m-0" />
-        <div class="bg-white rounded px-4">
-          <span class="text-green-700 text-sm hidden md:block"> Gadgets </span>
-          <div class="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
-            At every tiled on ye defer do. No attention suspected oh difficult.
-          </div>
-          <p class="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
-            Wonder matter now can estate esteem assure fat roused. Am performed on existence as discourse is. Pleasure friendly at marriage blessing or
-          </p>
-        </div>
-      </div>
 
-      <!-- post 2 -->
-      <div class="rounded w-full flex flex-col md:flex-row mb-10">
-        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" class="block md:hidden lg:block rounded-md h-64 md:h-32 m-4 md:m-0" />
-        <div class="bg-white rounded px-4">
-          <span class="text-green-700 text-sm hidden md:block"> Bitcoin </span>
-          <div class="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
-            Fond his say old meet cold find come whom. The sir park sake bred.
-          </div>
-          <p class="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
-            Integer commodo, sapien ut vulputate viverra, Integer commodo
-            Integer commodo, sapien ut vulputate viverra, Integer commodo
-          </p>
-        </div>
-      </div>
-      <!-- post 3 -->
-      <div class="rounded w-full flex flex-col md:flex-row mb-10">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" class="block md:hidden lg:block rounded-md h-64 md:h-32 m-4 md:m-0" />
-        <div class="bg-white rounded px-4">
-          <span class="text-green-700 text-sm hidden md:block"> Insights </span>
-          <div class="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
-            Advice me cousin an spring of needed. Tell use paid law ever yet new.
-          </div>
-          <p class="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
-            Meant to learn of vexed if style allow he there. Tiled man stand tears ten joy there terms any widen. 
-          </p>
-        </div>
-      </div>
-      <!-- post 4 -->
-      <div class="rounded w-full flex flex-col md:flex-row mb-10">
-        <img src="https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" class="block md:hidden lg:block rounded-md h-64 md:h-32 m-4 md:m-0" />
-        <div class="bg-white rounded px-4">
-          <span class="text-green-700 text-sm hidden md:block"> Cryptocurrency </span>
-          <div class="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
-            Advice me cousin an spring of needed. Tell use paid law ever yet new.
-          </div>
-          <p class="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
-            Meant to learn of vexed if style allow he there. Tiled man stand tears ten joy there terms any widen. 
-          </p>
-        </div>
-      </div>
+      ${await NewProduct.render()}
+      
 
-    </div>
+  </div>
 
   </div>
   <!-- end featured section -->
 
 
   <!-- recent posts -->
-  <div class="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
+
+
+</main>
+<div class="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
     <h2 class="font-bold text-3xl">Latest news</h2>
     <a class="bg-gray-200 hover:bg-green-200 text-gray-800 px-3 py-1 rounded cursor-pointer">
       View all
@@ -167,21 +118,7 @@ const News = {
       </form>
     </div>
   </div>
-
-</main>
 </div>  
-                    <h2 class="font-semibold text-blue-900 my-4 uppercase text-2xl">Tin tức học tập</h2>
-                    <div class="grid grid-cols-3 gap-8">
-                        ${data.map((post) => `
-                        <div class="border p-3">
-                            <a href="/#/news/${post.id}"><img src="${post.img}" alt="" /></a>
-                            <h3 class="my-3"><a href="/news/${post.id}" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
-                            <p>${post.desc}</p>
-                        </div>
-
-                    
-                        
-                        `).join("")}
                     </div>
                     
                     `;

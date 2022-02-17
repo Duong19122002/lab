@@ -5,9 +5,9 @@ const ProductsPage = {
     async render() {
         const { data } = await getAll();
         return /* html */ `
-        ${Header.render(        )}
+        ${Header.render()}
                     <h2 class="font-semibold text-blue-900 my-4 uppercase text-2xl">Danh sách sản phẩm</h2>
-                    <div class="grid grid-cols-3 gap-8">
+                    <div class="grid grid-cols-4 gap-8">
                         ${data.map((post) => `
                         <div class="border p-3">
                             <a href="/#/products/${post.id}"><img src="${post.img}" alt="" /></a>
