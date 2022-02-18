@@ -1,8 +1,8 @@
 import axios from "axios";
-import { add } from "../../../api/post";
+import { add } from "../../../api/product";
 import AdminNav from "../../../components/AdminNav";
 
-const AdminAddPost = {
+const AdminAddProduct = {
     render() {
         return /*html*/ `
             <div class="min-h-full">
@@ -36,7 +36,8 @@ const AdminAddPost = {
                     <!-- Replace with your content -->
                     <div class="px-4 py-6 sm:px-0">
                         <form id="form-add-post">
-                            <input type="text" class="border border-black" id="title-post" placeholder="Title"/><br />
+                            <input type="text" class="border border-black" id="name-post" placeholder="Name"/><br />
+                            <input type="text" class="border border-black" id="price-post" placeholder="Name"/><br />
                             <div class="w-3xl grid grid-cols-2 gap-8">
                                 <div><input type="file" class="border border-black" id="img-post" /></div>
                                 <div><img width="200" src="https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg" id="img-preview"/></div>
@@ -74,11 +75,12 @@ const AdminAddPost = {
             })
             // call api thêm bài viết
             add({
-                title: document.querySelector("#title-post").value,
+                name: document.querySelector("#name-post").value,
                 img: data.url,
                 desc: document.querySelector("#desc-post").value,
+                price: document.querySelector("#price-post").value,
             });
         });
       },
     };      
-export default AdminAddPost; 
+export default AdminAddProduct; 

@@ -6,12 +6,12 @@ import Header from "../../components/header"
 const DetailProduct = {
     async render(id) {
         const { data } = await get(id);
-    return `
+    return /*html*/ `
     ${Header.render()}
 <main class="grid place-items-center  bg-white max-w-7xl mx-auto my-12">
   <section class="max-w-7xl mx-auto py-10 grid grid-cols-2 gap-8 py-10 px-5  bg-gray-100 rounded-md shadow-lg w-3/4 md:max-w-2xl">
     <div class="text-indigo-500 flex flex-col justify-between">
-      <img class=" h-96 w-96" src="${data.img}"" />
+      <img class=" h-96 w-96" src="${data.img}" />
     </div>
     
     <div class="text-indigo-500">   
