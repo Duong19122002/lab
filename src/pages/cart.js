@@ -46,7 +46,7 @@ const CartPage = {
             </td>
             <td>
               <a href="#">
-                <p class="mb-2 md:ml-4">Earphone</p>
+                <p class="mb-2 md:ml-4">${item.name}</p>
                 <form action="" method="POST">
                   <button type="submit" data-id="${item.id}" class="btn btn-remove" class="text-red-700 md:ml-4">
                     <small>(Xóa Sản Phẩm)</small>

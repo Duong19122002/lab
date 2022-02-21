@@ -1,6 +1,6 @@
 import { getAll } from "../api/post";
 import NewProduct from "../components/newproduct"
-
+import Product from "../components/products"
 const News = {
     async render() {
         const { data } = await getAll();
@@ -41,7 +41,7 @@ const News = {
   <div class="grid gap-4 grid-cols-2 grid-rows-1">
     <!-- main post -->
     <div class="mb-4 lg:mb-0  p-4 lg:p-0 w-full md:w-4/7 relative rounded block">
-      <img src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" class="rounded-md object-cover w-full h-64">
+      <img src="https://brand.assets.reebok.com/f_auto,q_auto,fl_lossy/capi/reebok_enUS/natgeo-hero_274-760189.jpg  " class="rounded-md object-cover w-full h-64">
       <span class="text-green-700 text-sm hidden md:block mt-4"> Technology </span>
       <h1 class="text-gray-800 text-4xl font-bold mt-2 mb-2 leading-tight">
         Ignorant branched humanity led now marianne too.
@@ -57,7 +57,6 @@ const News = {
       </a>
     </div>
 
-
       ${await NewProduct.render()}
       
 
@@ -71,6 +70,13 @@ const News = {
 
 
 </main>
+<div class="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
+    <h2 class="font-bold text-3xl">Latest news</h2>
+    <a class="bg-gray-200 hover:bg-green-200 text-gray-800 px-3 py-1 rounded cursor-pointer">
+      View all
+    </a>
+  </div>
+${await Product.render()}   
 <div class="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
     <h2 class="font-bold text-3xl">Latest news</h2>
     <a class="bg-gray-200 hover:bg-green-200 text-gray-800 px-3 py-1 rounded cursor-pointer">
@@ -99,23 +105,41 @@ const News = {
   <!-- end recent posts --> 
 
   <!-- subscribe -->
-  <div class="rounded flex md:shadow mt-12">
-    <img src="https://images.unsplash.com/photo-1579275542618-a1dfed5f54ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" class="w-0 md:w-1/4 object-cover rounded-l" />
-    <div class="px-4 py-2">
-      <h3 class="text-3xl text-gray-800 font-bold">Subscribe to newsletter</h3>
-      <p class="text-xl text-gray-700">We sent latest news and posts once in every week, fresh from the oven</p>
-      <form class="mt-4 mb-10">
-        <input type="email" class="rounded bg-gray-100 px-4 py-2 border focus:border-green-400" placeholder="john@tech.com"/>
-        <button class="px-4 py-2 rounded bg-green-800 text-gray-100">
-          Subscribe
-          <i class='bx bx-right-arrow-alt' ></i>
-        </button>
-        <p class="text-green-900 opacity-50 text-sm mt-1">No spam. We promise</p>
-      </form>
-    </div>
+             
+              <div class="bg-gray-200">
+    <section class="py-5 mx-auto max-w-screen-xl  sm:flex flex-grow-0 sm:p-5">
+    <article class="flex-col justify-center inline-flex self-stretch  p-6">
+      <h2 class="uppercase font-semibold text-xl">Design</h2>
+      <strong class="text-lg pb-2 font-normal font-sans sm:text-2xl">Our 30 Year Journey</strong>
+      <p class="text-sm pb-4">Join us as we revisit our roots, tracing the path from bright idea to industry disruptors with a plan to fight climate change while creating beautiful things. </p>
+      <button class="font-semibold uppercase border-black border p-3 max-w-max hover:bg-gray-600 hover:text-white">Join us</button>
+    </article>
+    <figure>
+    <img 
+    src="https://images.unsplash.com/photo-1606170033648-5d55a3edf314?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGxpZ2h0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" 
+    alt="Banner" looding="lazy" />
+    </figure>
+    </section>
   </div>
-</div>  
-                    </div>
+            </div>  
+
+            <div class="rounded flex md:shadow mt-12">
+            <img src="https://images.unsplash.com/photo-1579275542618-a1dfed5f54ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" class="w-0 md:w-1/4 object-cover rounded-l" />
+            <div class="px-4 py-2">
+              <h3 class="text-3xl text-gray-800 font-bold">Subscribe to newsletter</h3>
+              <p class="text-xl text-gray-700">We sent latest news and posts once in every week, fresh from the oven</p>
+              <form class="mt-4 mb-10">
+                <input type="email" class="rounded bg-gray-100 px-4 py-2 border focus:border-green-400" placeholder="john@tech.com"/>
+                <button class="px-4 py-2 rounded bg-green-800 text-gray-100">
+                  Subscribe
+                  <i class='bx bx-right-arrow-alt' ></i>
+                </button>
+                <p class="text-green-900 opacity-50 text-sm mt-1">No spam. We promise</p>
+              </form>
+            </div>
+          </div>
+                </div>
+                
                     
                     `;
       

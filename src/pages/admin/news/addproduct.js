@@ -78,7 +78,7 @@ const AdminAddProduct = {
                 name: document.querySelector("#name-post").value,
                 img: data.url,
                 desc: document.querySelector("#desc-post").value,
-                price: document.querySelector("#price-post").value,
+                price: document.querySelector("#price       -post").value,
             });
         });
       },
