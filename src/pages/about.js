@@ -35,7 +35,7 @@ const AboutPage = {
         <div class="container mx-auto px-6">
             <div class="grid gap-4 grid-cols-2"> 
                     <div>
-                    <h3 class="text-gray-700 text-2xl font-medium">Wrist Watch</h3>
+                    <h3 class="text-gray-700 text-2xl font-medium">Bộ Sưu Tập Giày Mới Nhất</h3>
                     <span class="mt-3 text-sm text-gray-500">200+ Products</span>
                     </div>  
                     <div class="col-end-7 col-span-2">          
@@ -83,4 +83,4 @@ const AboutPage = {
     },
 };
 
-export default AboutPage;
+export default AboutPage;       
