@@ -41,16 +41,12 @@ const News = {
   <div class="grid gap-4 grid-cols-2 grid-rows-1">
     <!-- main post -->
     <div class="mb-4 lg:mb-0  p-4 lg:p-0 w-full md:w-4/7 relative rounded block">
-      <img src="https://brand.assets.reebok.com/f_auto,q_auto,fl_lossy/capi/reebok_enUS/natgeo-hero_274-760189.jpg  " class="rounded-md object-cover w-full h-64">
-      <span class="text-green-700 text-sm hidden md:block mt-4"> Technology </span>
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/aa3a6b6cfbc34f228ca3adda00e51792_9366/Giay_Her_Court_Hong_GX3501.jpg">
       <h1 class="text-gray-800 text-4xl font-bold mt-2 mb-2 leading-tight">
-        Ignorant branched humanity led now marianne too.
+      ĐÔI GIÀY THANH THOÁT CHO CẢM GIÁC THOẢI MÁI SUỐT CẢ NGÀY.
       </h1>
       <p class="text-gray-600 mb-4">
-        Necessary ye contented newspaper zealously breakfast he prevailed. Melancholy middletons yet understood
-        decisively boy law she. Answer him easily are its barton little. Oh no though mother be things simple
-        itself.
-        Oh be me, sure wise sons, no. Piqued ye of am spirit regret. Stimulated discretion impossible admiration in particular conviction up.
+      Bạn sẽ không còn phải đau đầu khi lên đồ mỗi ngày nữa. Hãy mix & match đôi giày adidas này tùy theo tâm trạng của bạn. Đế giữa siêu dày và thân giày bằng da mềm dẻo cùng miếng chắn bùn bằng da lộn mềm mại ở thân giày trước kết hợp cùng nhau nâng tầm phong cách của bạn. Các logo low-key mang đến nét tinh tế và thanh lịch cho đôi giày.
       </p>
       <a href="./blog.html" class="inline-block px-6 py-3 mt-2 rounded-md bg-green-700 text-gray-100">
         Read more
@@ -110,13 +106,13 @@ ${await Product.render()}
     <section class="py-5 mx-auto max-w-screen-xl  sm:flex flex-grow-0 sm:p-5">
     <article class="flex-col justify-center inline-flex self-stretch  p-6">
       <h2 class="uppercase font-semibold text-xl">Design</h2>
-      <strong class="text-lg pb-2 font-normal font-sans sm:text-2xl">Our 30 Year Journey</strong>
-      <p class="text-sm pb-4">Join us as we revisit our roots, tracing the path from bright idea to industry disruptors with a plan to fight climate change while creating beautiful things. </p>
+      <strong class="text-lg pb-2 font-normal font-sans sm:text-2xl">CHÚNG TÔI ĐÃ CHO BẠN ĐƯỢC BẢO HIỂM</strong>
+      <p class="text-sm pb-4">Khám phá Mặt che của adidas với sự thoải mái được cải tiến, được thiết kế để tập thể dục. </p>
       <button class="font-semibold uppercase border-black border p-3 max-w-max hover:bg-gray-600 hover:text-white">Join us</button>
     </article>
     <figure>
     <img 
-    src="https://images.unsplash.com/photo-1606170033648-5d55a3edf314?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGxpZ2h0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" 
+    src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/viVN/Images/facecovering-hp-tc-d_tcm337-694777.jpg" 
     alt="Banner" looding="lazy" />
     </figure>
     </section>
@@ -126,7 +122,6 @@ ${await Product.render()}
             <div class="rounded flex md:shadow mt-12">
             <img src="https://images.unsplash.com/photo-1579275542618-a1dfed5f54ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" class="w-0 md:w-1/4 object-cover rounded-l" />
             <div class="px-4 py-2">
-              <h3 class="text-3xl text-gray-800 font-bold">Subscribe to newsletter</h3>
               <p class="text-xl text-gray-700">We sent latest news and posts once in every week, fresh from the oven</p>
               <form class="mt-4 mb-10">
                 <input type="email" class="rounded bg-gray-100 px-4 py-2 border focus:border-green-400" placeholder="john@tech.com"/>

@@ -41,9 +41,7 @@ const Header = {
           <a href="/#/product" class="text-base font-medium text-gray-500 hover:text-gray-900"> Tin Tức </a>
           <div class="relative">
             <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-            <button type="button" class="text-gray-800 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false">
-            <a href="/#/admin/dashboard" class="text-base font-medium text-gray-500 hover:text-gray-900"> Admin </a>
-            </button>
+          
           </div>
           </ul>
         </nav>
