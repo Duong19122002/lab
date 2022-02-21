@@ -7,7 +7,7 @@ const AdminNav = {
                       <div class="flex items-center">
                       <div class="flex-shrink-0">
                       <a href="/">
-                          <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
+                          <img class="h-8 w-8" src="https://i.pinimg.com/originals/13/c4/02/13c40225b62fdcc37bbe05ef149c3619.png" alt="Workflow">
                           </a>
                       </div>
                       <div class="hidden md:block">

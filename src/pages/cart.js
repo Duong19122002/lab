@@ -32,7 +32,7 @@ const CartPage = {
               <span class="hidden lg:inline">Số Lượng</span>
             </th>
             <th class="hidden text-right md:table-cell">Giá Sản Phẩm</th>
-            <th class="text-right">Total price</th>
+            <th class="text-right">Tổng Tiền</th>
           </tr>
         </thead>
         <tbody>
